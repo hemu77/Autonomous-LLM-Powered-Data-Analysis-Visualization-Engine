@@ -1,0 +1,34 @@
+{
+  "pass_rate": 1.0,
+  "passed": 3,
+  "total": 3,
+  "cases": [
+    {
+      "name": "country_revenue",
+      "pass": true,
+      "rows": 10,
+      "columns": [
+        "country",
+        "net_revenue_sum"
+      ]
+    },
+    {
+      "name": "monthly_revenue",
+      "pass": true,
+      "rows": 13,
+      "columns": [
+        "invoice_ym",
+        "net_revenue_sum"
+      ]
+    },
+    {
+      "name": "return_rate",
+      "pass": true,
+      "rows": 2,
+      "columns": [
+        "is_return",
+        "count_rows"
+      ]
+    }
+  ]
+}

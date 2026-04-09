@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automated-llm-pred"
+version = "0.1.0"
+description = "Deterministic analytics automation with hybrid LLM routing and recruiter-grade reporting."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.1",
+  "numpy>=1.26",
+  "plotnine>=0.13",
+  "kaleido>=0.2.1",
+  "langchain-community>=0.2.0",
+  "langchain-core>=0.2.0",
+  "litellm>=1.45.0",
+  "reportlab>=4.0",
+  "openpyxl>=3.1",
+  "pyarrow>=15.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+run-case-study = "automated_llm_pred.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
